@@ -18,7 +18,7 @@
 ## 📸 Interface
 
 <div align="center"> 
-  <img src="https://github.com/user-attachments/assets/ef3cf613-1cc8-4f54-8f7c-4b50512de3e4" alt="NeonCalc Pro Screenshot" width="600">
+  <img src="https://github.com/user-attachments/assets/5518b4aa-1d42-409c-a537-1a94fc32ed34" alt="NeonCalc Pro Screenshot" width="600">
   <br>
   <em>The NeonCalc Pro Interface running on Windows</em>
 </div>
