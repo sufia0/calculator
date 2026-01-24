@@ -1,115 +1,81 @@
-# 🧮 NeonCalc Pro
+# 📟 NeonCalc-pro
 
-<div align="center">
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+> *:: SYSTEM READY :: STREAM_ACTIVE*
 
-**A sleek, high-performance desktop calculator with a modern neon aesthetic.**
-
-[View Demo](#) • [Report Bug](#) • [Request Feature](#)
-
-</div>
+**NeonCalc-pro** is a fully functional, high-fidelity arithmetic interface built with Python and Tkinter. Designed for high-contrast visibility and a retro-futuristic aesthetic, it mimics the interface of a sci-fi terminal or cyberdeck.
 
 ---
 
-## 📸 Interface
+## 📸 Interface Visualization
 
-<div align="center"> 
-  <img src="https://github.com/user-attachments/assets/5518b4aa-1d42-409c-a537-1a94fc32ed34" alt="NeonCalc Pro Screenshot" width="600">
-  <br>
-  <em>The NeonCalc Pro Interface running on Windows</em>
-</div>
+![CyberDeck Screenshot](https://github.com/user-attachments/assets/96997473-c745-4716-a609-1f571fce08d1)
 
 ---
 
-## 📖 About The Project
+## ⚡ System Capabilities (Features)
 
-**NeonCalc Pro** is a desktop application built using Python's native Tkinter library. It moves away from the traditional, gray calculator look and embraces a vibrant, dark-mode inspired "Neon" aesthetic. 
-
-Designed for users who want a calculator that looks as good as it performs, NeonCalc Pro handles daily arithmetic with style.
-
-### ✨ Key Features
-
-* **Neon Aesthetics:** Glowing text effects against a dark background for reduced eye strain.
-* **Responsive Button Feedback:** Visual feedback on clicks for a tactile feel.
-* **Keyboard Support:** Full mapping of Numpad and standard keyboard keys.
-* **Error Handling:** gracefully handles division by zero and syntax errors.
-* **Lightweight:** zero external dependencies; runs on standard Python installations.
+* **Neon Wireframe Aesthetic:** Custom-drawn styling using nested frames to create neon borders that glow against a void-black background.
+* **Reactive UX:** Buttons feature a "hacker-style" hover effect, instantly filling with neon light (Cyan, Pink, Yellow, or Green) upon interaction.
+* **Dual-Line Display:**
+    * **History Line:** Shows the current equation string in dim green.
+    * **Result Line:** Shows the active input or calculated result in high-vis matrix green.
+* **Full Keyboard Support:** operate the deck entirely via Numpad or standard keyboard keys.
+* **Error Handling:** Graces syntax errors with a standard `ERR:SYNTAX` message rather than crashing.
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Deployment (Installation)
 
-* **[Python 3](https://www.python.org/)** - The core logic.
-* **[Tkinter](https://docs.python.org/3/library/tkinter.html)** - Standard GUI library for Python.
-
----
-
-## 🚀 Getting Started
-
-To get a local copy up and running, follow these simple steps.
+No external dependencies are required. This calculator runs on the standard Python library.
 
 ### Prerequisites
+* Python 3.x installed.
+* Tkinter (Usually included with Python).
 
-You need Python installed on your system.
-* Check your version:
-    ```sh
-    python --version
+*Note for Linux users: If you are on a minimal install, you may need to run `sudo apt-get install python3-tk`.*
+
+### Running the Deck
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/calculator.git](https://github.com/YOUR_USERNAME/calculator.git)
     ```
-
-### Installation
-
-1.  **Clone the repo**
-    ```sh
-    git clone [https://github.com/sufia0/calculator.git](https://github.com/sufia0/calculator.git)
-    ```
-2.  **Navigate to the directory**
-    ```sh
+2.  Navigate to the directory:
+    ```bash
     cd calculator
     ```
-3.  **Run the application**
-    ```sh
+3.  Execute the mainframe:
+    ```bash
     python main.py
     ```
 
 ---
 
-## 🎮 Usage
+## ⌨️ Controls
 
-1.  Launch the application via the terminal.
-2.  Use your mouse to click the buttons **OR** use your keyboard Numpad.
-3.  Press `Esc` or `C` to clear the screen.
-4.  Press `Enter` or `=` to calculate the result.
-
----
-
-## 🛣️ Roadmap
-
-- [x] Basic Arithmetic (+, -, *, /)
-- [x] Keyboard binding
-- [x] Scientific functions (sin, cos, tan)
-- [ ] History log sidebar
-- [ ] Customizable neon color themes
+| Input | Action |
+| :--- | :--- |
+| **0-9** | Enter Numbers |
+| **+, -, *, /** | Operators |
+| **Enter / Return** | Calculate Result (=) |
+| **Backspace** | Delete last character (DEL) |
+| **Esc** | Clear All (CLR) |
 
 ---
 
-## 🤝 Contributing
+## 🎨 Customization
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+The color palette is centralized in the `__init__` method. You can easily modify the hex codes to change the theme from **Cyberpunk** to **Synthwave** or **Monochrome**.
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+Look for the `self.colors` dictionary in the code:
 
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
+```python
+self.colors = {
+    'bg': '#050505',            # Background
+    'text_result': '#00ff41',   # Matrix Green
+    'neon_op': '#ff0055',       # Operator Pink
+    ...
+}
